@@ -66,6 +66,7 @@ img{
     width: 100%;
     border-bottom: 1px solid var(--cornflower);
     background: var(--white);
+    padding: 11px 0px;
 }
 
 .header-container {
@@ -82,6 +83,7 @@ img{
     justify-content: space-between;
     align-items: center;
     gap: 76px;
+    width: 100%;
 }
 
 .header-nav .logo {
@@ -99,7 +101,7 @@ img{
 }
 
 .nav-lists{
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     gap: 40px;
@@ -112,7 +114,7 @@ img{
 .nav-lists li::after{
     content: "";
     position: absolute;
-    bottom: -17px;
+    bottom: -28px;
     left: 0;
     width: 0%;
     height: 4px;
@@ -139,7 +141,7 @@ img{
 }
 
 .header-address {
-    display: flex;
+    display: none;
     align-items: center;
     gap: 40px;
 }
@@ -154,6 +156,16 @@ img{
     color: var(--iris);
 }
 
+.nav-toggle{
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+}
 main {
     display: block;
     width: 100%;
@@ -177,7 +189,7 @@ main {
 
 .hero-container h1 {
     font-family: "Roboto", sans-serif;
-    font-size: 56px;
+    font-size: 36px;
     font-style: normal;
     font-weight: 700;
     text-align: center;
@@ -218,11 +230,14 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     gap: 30px;
 }
 
 .about-list-item {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     gap: 8px;
 }
@@ -232,26 +247,29 @@ main {
     width: 100%;
     border-radius: 4px 4px 0px 0px;
     background: var(--cloud);
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 }
 
 .about-list-item h3 {
-    font-size: 20px;
+    font-size: 36px;
     font-family: "Roboto", sans-serif;
-    font-weight: 500;
+    font-weight: 700;
     letter-spacing: 0.4px;
     color: var(--navyblue);
 }
 
 .about-list-item p {
+    font-weight: 500;
+    text-align: left;
     color: var(--slate);
     letter-spacing: 0.32px;
     line-height: 24px;
 }
 
 .services{
+    display: none;
     width: 100%;
 }
 
@@ -300,7 +318,7 @@ main {
 .teams-container h2{
     font-family: "Roboto",
     sans-serif;
-    font-size: 32px;
+    font-size: 36px;
     font-style: normal;
     font-weight: 700;
     text-align: center;
@@ -312,6 +330,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: column;
     gap: 40px;
 }
 
@@ -409,20 +428,29 @@ main {
 .customers-container h2{
     font-family: "Roboto",
     sans-serif;
-    font-size: 32px;
+    font-size: 36px;
     font-style: normal;
     font-weight: 700;
     text-align: center;
     color: var(--navyblue);
-    margin-bottom: 40px;
+    margin-bottom: 88px;
 }
 
-.customers-lists{
+.customers-lists {
+    /* 2 columns */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 88px;
+    column-gap: 16px;
+}
+
+/* .customers-lists{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: column;
     gap: 40px;
-}
+} */
 
 .customers-list-item{
     width: 100%;
@@ -590,24 +618,27 @@ main {
 
 .footer-lists{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     gap: 40px;
 }
 
 .footer-list-item{
     width: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    gap: 10px;
+    gap: 17.5px;
 }
 
 .footer-list-item .logo {
     font-family: "Raleway", sans-serif;
     text-transform: uppercase;
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: 0.4px;
-    color: var(--white);
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--cloud);
 }
 
 
@@ -631,7 +662,7 @@ main {
 .footer-social-lists{
     display: flex;
     justify-content: flex-start;
-    gap: 24px;
+    gap: 16px;
 }
 
 .footer-social-item{
@@ -662,12 +693,17 @@ main {
 }
 
 .footer-form{
+    width: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     gap: 16px;
 }
 
 .footer-form input{
     height: 40px;
+    width: 398px;
     border-radius: 4px;
     border: 1px solid var(--white);
     padding: 8px 16px;
@@ -735,12 +771,11 @@ main {
 }
 
 .modal-content{
-    width: 440px;
+    width: 408px;
     max-height: 100%;
-    margin: 0 30px;
     background: var(--white);
     border-radius: 4px;
-    padding: 40px 24px;
+    padding: 72px 24px 24px;
     position: relative;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     transform: none;
@@ -782,7 +817,7 @@ main {
     display: flex;
     justify-content:center;
     align-items: center;
-    margin: 30px 0px;
+    margin-bottom: 16px;
 }
 
 .modal-header h3{
@@ -846,9 +881,18 @@ main {
     border: none;
     outline: none;
     font-family: 'Roboto', sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     color: var(--navyblue);
     background: transparent;
+}
+
+.form-group-input svg{
+    fill: var(--lightslate);
+    transition: fill var(--transition-duration) var(--animation-timing-function);
+}
+
+.form-group-input:focus-within svg{
+    fill: var(--iris);
 }
 
 .form-group-input:focus-within{
@@ -862,7 +906,8 @@ main {
     padding: 8px 16px;
     resize: none;
     font-family: 'Roboto', sans-serif;
-    font-size: 14px;
+    font-size: 12px;
+    outline: none;
 }
 
 .form-group textarea:focus{
@@ -882,6 +927,15 @@ main {
     font-size: 12px;
 }
 
+.form-group-agree label a{
+    color: var(--iris);
+    transition: color var(--transition-duration) var(--animation-timing-function);
+}
+
+.form-group-agree label a:hover{
+    color: var(--ocean);
+}
+
 .form-group-agree input{
     width: 16px;
     height: 16px;
@@ -890,6 +944,7 @@ main {
 }
 
 .submit-btn{
+    margin-top: 8px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -897,10 +952,10 @@ main {
 }
 
 .submit-btn button[type="submit"]{
-    margin: 0;
     height: 40px;
     border-radius: 4px;
-    padding: 8px 24px;
+    padding: 16px 32px;
+    min-width: 169px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -908,6 +963,14 @@ main {
     background: var(--iris);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     transition: all var(--transition-duration) var(--animation-timing-function);
+}
+
+.submit-btn button[type="submit"]:hover{
+    background: var(--ocean);
+}
+
+.submit-btn button[type="submit"]:active{
+    background: var(--green);
 }
 
 /* mobile 428px */
