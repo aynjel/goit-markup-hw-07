@@ -1,0 +1,109 @@
+.tablet-header-nav{
+    display: none;
+}
+
+/*
+* Media Queries
+*/
+
+/* 
+* Tablet: 768px
+*/
+@media screen and (min-width: 768px) {
+    .mobile-header-nav{
+        display: none;
+    }
+    
+    .tablet-header-nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-address{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .header-address a {
+        font-style: normal;
+        color: var(--navyblue);
+        transition: color var(--transition-duration) var(--animation-timing-function);
+    }
+    
+    .header-address a:hover {
+        color: var(--iris);
+    }
+    
+    .header-nav .logo {
+        color: var(--navyblue);
+        font-family: "Raleway", sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 800;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+    
+    .header-nav .logo-span {
+        color: var(--iris);
+    }
+    
+    .nav-lists{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+    
+    .nav-lists li{
+        position: relative;
+    }
+    
+    .nav-lists li::after{
+        content: "";
+        position: absolute;
+        bottom: -40px;
+        left: 0;
+        width: 0%;
+        height: 4px;
+        border-radius: 2px;
+        background: var(--iris);
+        transition: width var(--transition-duration) var(--animation-timing-function);
+    }
+    
+    .nav-lists li a {
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--navyblue);
+        transition: color var(--transition-duration) var(--animation-timing-function);
+    }
+    
+    .nav-lists li:hover a, .nav-lists li:hover::after {
+        color: var(--iris);
+        width: 100%;
+    }
+    
+    .nav-lists li.active a, .nav-lists li.active::after {
+        color: var(--iris);
+        width: 100%;
+    }
+
+    .modal-content{
+        margin: 0;
+    }
+
+    .about-lists{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 72px;
+        column-gap: 24px;
+    }
+
+    .about-list-item{
+        align-items: flex-start;
+        width: 356px;
+    }
+}
