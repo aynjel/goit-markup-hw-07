@@ -43,7 +43,7 @@
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     padding: 32px;
     display: flex;
     flex-direction: column;
@@ -527,16 +527,11 @@
 
 .teams{
     background: var(--cloud);
-    width: 100%;
-    padding: 88px 82px;
+    /* width: 100%; */
 }
 
 .teams .container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 88px;
+    padding: 88px 0;
 }
 
 .teams .container h2{
@@ -547,16 +542,21 @@
     letter-spacing: 0.72px;
     text-transform: capitalize;
     text-align: center;
+    margin-bottom: 72px;
 }
 
 .teams-lists{
     display: flex;
-    flex-direction: column;
-    gap: 72px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    row-gap: 64px;
+    column-gap: 24px;
 }
 
 .teams-list-item{
-    width: 100%;
+    width: 264px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -635,25 +635,22 @@
 }
 
 .customers{
-    width: 100%;
-    padding: 88px 16px;
+    /* width: 100%; */
 }
 
 .customers .container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 88px;
+    padding: 88px 0px;
 }
 
 .customers .container h2{
     color: var(--navyblue);
+    text-align: center;
     font-family: "Roboto", sans-serif;
     font-size: 36px;
     font-weight: 700;
     letter-spacing: 0.72px;
     text-transform: capitalize;
+    margin-bottom: 88px;
 }
 
 .customers .container .customers-lists{
@@ -662,11 +659,11 @@
     align-items: center;
     flex-wrap: wrap;
     row-gap: 72px;
-    column-gap: 16px;
+    column-gap: 24px;
 }
 
 .customers-lists .customers-list-item{
-    width: 140px;
+    width: 188px;
     height: 88px;
     display: flex;
     justify-content: center;
@@ -797,11 +794,15 @@
 */
 .footer{
     width: 100%;
-    padding: 88px 16px;
     background-color: var(--navyblue);
 }
 
+.footer .container{
+    padding: 88px 0px;
+}
+
 .footer-lists{
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -962,6 +963,7 @@
         font-style: normal;
         color: var(--navyblue);
         transition: color var(--transition-duration) var(--animation-timing-function);
+        font-size: 12px;
     }
     
     .header-address a:hover {
@@ -996,7 +998,7 @@
     .nav-lists li::after{
         content: "";
         position: absolute;
-        bottom: -40px;
+        bottom: -36px;
         left: 0;
         width: 0%;
         height: 4px;
@@ -1024,6 +1026,15 @@
 
     .modal-content{
         margin: 0;
+    }
+
+    /* Hero */
+    .hero .container h1{
+        font-size: 56px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 60px;
+        letter-spacing: 1.12px;
     }
 
     .about-lists{
