@@ -663,7 +663,7 @@
 }
 
 .customers-lists .customers-list-item{
-    width: 188px;
+    width: 178px;
     height: 88px;
     display: flex;
     justify-content: center;
@@ -1103,4 +1103,39 @@
     .footer-form-group input{
         width: 268px;
     }
+}
+
+@media screen and (min-width: 1200px) {
+    .tablet-header-nav{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .about .container{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .teams .container{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .teams-lists, .customers-lists{
+        justify-content: space-between;
+    }
+
+    .customers .container{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .customers-list-item{
+        
+    }
+
+    .about-list-item{
+        width: 264px;
+    }
+    
 }
