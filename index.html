@@ -18,49 +18,40 @@
 
 <body>
     <header class="header">
-        <nav class="mobile-header-nav">
-            <a href="index.html" class="logo">
-                <span class="logo-span">Web</span>Studio
-            </a>
-            <ul class="nav-lists d-none">
-                <li class="active">
-                    <a class="active" href="index.html">Studio</a>
-                </li>
-                <li>
-                    <a href="portfolio.html">Portfolio</a>
-                </li>
-                <li>
-                    <a href="#">Contacts</a>
-                </li>
-            </ul>
+        <div class="container">
+            <nav class="mobile-menu">
+                <a href="index.html" class="logo">
+                    <span class="logo-span">Web</span>Studio
+                </a>
 
-            <button type="button" class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
-                <svg width="24" height="24">
-                    <use href="./images/svg/icons.svg#menu"></use>
-                </svg>
-            </button>
-        </nav>
+                <button type="button" class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <svg width="24" height="24">
+                        <use href="./images/svg/icons.svg#menu"></use>
+                    </svg>
+                </button>
+            </nav>
 
-        <nav class="tablet-header-nav">
-            <a href="index.html" class="logo">
-                <span class="logo-span">Web</span>Studio
-            </a>
-            <ul class="nav-lists">
-                <li class="active">
-                    <a href="index.html">Studio</a>
-                </li>
-                <li>
-                    <a href="portfolio.html">Portfolio</a>
-                </li>
-                <li>
-                    <a href="#">Contacts</a>
-                </li>
-            </ul>
-            <address class="header-address">
-                <a href="mailto:info@devstudio.com">info@devstudio.com</a>
-                <a href="tel:+380000000000">+11 (000) 111-11-11</a>
-            </address>
-        </nav>
+            <nav class="header-nav">
+                <a href="index.html" class="logo">
+                    <span class="logo-span">Web</span>Studio
+                </a>
+                <ul class="nav-lists">
+                    <li class="active">
+                        <a href="index.html">Studio</a>
+                    </li>
+                    <li>
+                        <a href="portfolio.html">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#">Contacts</a>
+                    </li>
+                </ul>
+                <address class="header-address">
+                    <a href="mailto:info@devstudio.com">info@devstudio.com</a>
+                    <a href="tel:+380000000000">+11 (000) 111-11-11</a>
+                </address>
+            </nav>
+        </div>
 
     </header>
 
@@ -78,10 +69,11 @@
         </section>
 
         <section class="about">
-            <div class="container mobile-about">
+            <div class="container">
+                <h2 hidden>About</h2>
                 <ul class="about-lists">
                     <li class="about-list-item">
-                        <div class="about-list-item-icon d-none">
+                        <div class="about-list-item-icon">
                             <svg width="64" height="64">
                                 <use href="./images/svg/icons.svg#strategy"></use>
                             </svg>
@@ -92,7 +84,7 @@
                         </p>
                     </li>
                     <li class="about-list-item">
-                        <div class="about-list-item-icon d-none">
+                        <div class="about-list-item-icon">
                             <svg width="64" height="64">
                                 <use href="./images/svg/icons.svg#punctuality"></use>
                             </svg>
@@ -103,7 +95,7 @@
                         </p>
                     </li>
                     <li class="about-list-item">
-                        <div class="about-list-item-icon d-none">
+                        <div class="about-list-item-icon">
                             <svg width="64" height="64">
                                 <use href="./images/svg/icons.svg#deligence"></use>
                             </svg>
@@ -114,7 +106,7 @@
                         </p>
                     </li>
                     <li class="about-list-item">
-                        <div class="about-list-item-icon d-none">
+                        <div class="about-list-item-icon">
                             <svg width="64" height="64">
                                 <use href="./images/svg/icons.svg#astronaut"></use>
                             </svg>
@@ -128,9 +120,9 @@
             </div>
         </section>
 
-        <section class="services d-none">
-            <div class="services-container">
-                <h2>
+        <section class="services">
+            <div class="container">
+                <h2 class="services-title">
                     What are we doing
                 </h2>
 
@@ -150,7 +142,7 @@
 
         <section class="teams">
             <div class="container">
-                <h2>
+                <h2 class="teams-title">
                     Our teams
                 </h2>
 
@@ -309,7 +301,7 @@
 
         <section class="customers">
             <div class="container">
-                <h2>
+                <h2 class="customers-title">
                     Customers
                 </h2>
 
@@ -426,7 +418,7 @@
             </svg>
         </button>
 
-        <ul class="mobile-menu">
+        <ul class="mobile-menu-content">
             <li>
                 <a class="active" href="index.html">Studio</a>
             </li>
@@ -536,6 +528,8 @@
             </div>
         </div>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js" integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script src="js/modal.js"></script>
     <script src="js/mobile-menu.js"></script>
