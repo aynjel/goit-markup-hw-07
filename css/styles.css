@@ -9,6 +9,26 @@
     display: none;
 }
 
+.header-address a{
+    color: var(--slate);
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.48px;
+    font-style: normal;
+}
+
+.nav-lists li a{
+    color: var(--navyblue);
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.32px;
+}
+
+.nav-lists li a:hover,
+.header-address a:hover{
+    color: var(--iris);
+}
+
 .mobile-menu{
     display: flex;
     justify-content: space-between;
@@ -225,7 +245,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background: var(--navybluemodal);
     display: flex;
     justify-content: center;
@@ -531,6 +551,8 @@
 }
 
 .teams-lists{
+    max-width: 264px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 72px;
@@ -631,14 +653,16 @@
 }
 
 .customers-lists{
+    width: 396px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 16px;
-    row-gap: 72px;
+    grid-row-gap: 72px;
+    grid-column-gap: 16px;
 }
 
 .customers-list-item{
-    width: 160px;
+    width: 190px;
     height: 88px;
     display: flex;
     justify-content: center;
@@ -809,5 +833,75 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+
+    .about-list-item h3{
+        text-align: left;
+    }
+
+    .about-lists{
+        max-width: 576px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 72px;
+    }
+
+    .teams-lists{
+        max-width: 576px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 64px;
+        grid-column-gap: 24px;
+    }
+
+    .customers-lists{
+        width: 552px;
+        margin: 0 auto;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 24px;
+    }
+
+    .customers-list-item{
+        width: 168px;
+        height: 88px;
+    }
+
+    .footer-lists{
+        max-width: 576px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 72px;
+    }
+
+    .footer-list-item{
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .footer-list-item:nth-last-child(1){
+        grid-column: 1 / 3;
+    }
+
+    .footer-social-lists{
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .footer-form{
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    .footer-form-group{
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 16px;
     }
 }
